@@ -7,15 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91166149235DA70A004A106D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166148235DA70A004A106D /* SystemConfiguration.framework */; };
+		9116614B235DA794004A106D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614A235DA742004A106D /* libz.tbd */; };
+		9116614D235DA7C9004A106D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614C235DA7BE004A106D /* libc++.tbd */; };
+		9116614F235DA7F9004A106D /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614E235DA7F9004A106D /* CoreServices.framework */; };
+		91166151235DA80D004A106D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166150235DA80D004A106D /* MediaPlayer.framework */; };
+		91166153235DA81B004A106D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166152235DA81B004A106D /* AssetsLibrary.framework */; };
+		91166155235DA82C004A106D /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166154235DA82C004A106D /* EventKit.framework */; };
+		91166157235DA872004A106D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166156235DA872004A106D /* MessageUI.framework */; };
+		91166159235DA880004A106D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166158235DA880004A106D /* AdSupport.framework */; };
 		913BE66E23599F150042D8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BE66D23599F150042D8F8 /* AppDelegate.swift */; };
 		913BE67023599F150042D8F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BE66F23599F150042D8F8 /* SceneDelegate.swift */; };
 		913BE67223599F150042D8F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BE67123599F150042D8F8 /* ViewController.swift */; };
 		913BE67523599F150042D8F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913BE67323599F150042D8F8 /* Main.storyboard */; };
 		913BE67723599F1F0042D8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913BE67623599F1F0042D8F8 /* Assets.xcassets */; };
 		913BE67A23599F1F0042D8F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913BE67823599F1F0042D8F8 /* LaunchScreen.storyboard */; };
+		913BE6812359A4660042D8F8 /* AditionAdsLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913BE6802359A4660042D8F8 /* AditionAdsLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91166148235DA70A004A106D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		9116614A235DA742004A106D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
+		9116614C235DA7BE004A106D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
+		9116614E235DA7F9004A106D /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		91166150235DA80D004A106D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		91166152235DA81B004A106D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		91166154235DA82C004A106D /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/EventKit.framework; sourceTree = DEVELOPER_DIR; };
+		91166156235DA872004A106D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		91166158235DA880004A106D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
 		913BE66A23599F150042D8F8 /* SwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913BE66D23599F150042D8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		913BE66F23599F150042D8F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,7 +43,28 @@
 		913BE67623599F1F0042D8F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		913BE67923599F1F0042D8F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		913BE67B23599F1F0042D8F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		913BE6802359A4660042D8F8 /* AditionAdsLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AditionAdsLib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		913BE66723599F150042D8F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91166155235DA82C004A106D /* EventKit.framework in Frameworks */,
+				91166159235DA880004A106D /* AdSupport.framework in Frameworks */,
+				91166149235DA70A004A106D /* SystemConfiguration.framework in Frameworks */,
+				9116614B235DA794004A106D /* libz.tbd in Frameworks */,
+				91166153235DA81B004A106D /* AssetsLibrary.framework in Frameworks */,
+				9116614D235DA7C9004A106D /* libc++.tbd in Frameworks */,
+				9116614F235DA7F9004A106D /* CoreServices.framework in Frameworks */,
+				91166151235DA80D004A106D /* MediaPlayer.framework in Frameworks */,
+				913BE6812359A4660042D8F8 /* AditionAdsLib.framework in Frameworks */,
+				91166157235DA872004A106D /* MessageUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		913BE66B23599F150042D8F8 /* Products */ = {
@@ -47,6 +87,23 @@
 				913BE67B23599F1F0042D8F8 /* Info.plist */,
 			);
 			path = SwiftSample;
+			sourceTree = "<group>";
+		};
+		913BE67F2359A4440042D8F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91166158235DA880004A106D /* AdSupport.framework */,
+				91166156235DA872004A106D /* MessageUI.framework */,
+				91166154235DA82C004A106D /* EventKit.framework */,
+				91166152235DA81B004A106D /* AssetsLibrary.framework */,
+				91166150235DA80D004A106D /* MediaPlayer.framework */,
+				9116614E235DA7F9004A106D /* CoreServices.framework */,
+				9116614C235DA7BE004A106D /* libc++.tbd */,
+				9116614A235DA742004A106D /* libz.tbd */,
+				91166148235DA70A004A106D /* SystemConfiguration.framework */,
+				913BE6802359A4660042D8F8 /* AditionAdsLib.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		915C8A312343722E00746E7E = {
@@ -283,6 +340,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -315,6 +376,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
