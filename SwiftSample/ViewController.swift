@@ -15,10 +15,14 @@ class ViewController: UIViewController {
     
     let yieldprobe = Yieldprobe.shared
 
+    // MARK: - Yieldprobe Configuration
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        let configuration = Configuration(extraTargeting: ["age": "27"])
+        yieldprobe.configure(using: configuration)
+
         if let version = AdsView.sdkVersionNumber() {
             aditionLabel.text = "Using Adition SDK v\(version)"
         } else {
@@ -36,27 +40,32 @@ class ViewController: UIViewController {
     
     var pendingAdView: AdsView?
     
+    // MARK: - Yieldprobe Request
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        yieldprobe.probe(slot: 6846238, queue: .main) { result in
-            do {
-                // AditionAdsLib expects String or null only.
-                let bid = try result.get()
-                let targeting = try bid.customTargeting()
-                    .mapValues(String.init(describing:))
-                
-                let view = AdsView(inlineWithFrame: CGRect(origin: .zero,
-                                                           size: CGSize(width: 300,
-                                                                        height: 250)),
-                                   delegate: self)
-                try view?.targeting.mergeProfileTargeting(with: targeting)
-                try view?.loadCreative(fromNetwork: "99", withContentUnitID: "4493233")
-                self.pendingAdView = view
-                print("loading…")
-            } catch {
-                self.handle(error: error)
-            }
+        yieldprobe.probe(slot: 6846238, queue: .main, completionHandler: onResult(_:))
+    }
+    
+    // MARK: - Yieldprobe Response
+    func onResult (_ result: Result<Bid,Error>) {
+        do {
+            let bid = try result.get()
+            
+            // AditionAdsLib expects String or null only.
+            let targeting = try bid.customTargeting()
+                .mapValues(String.init(describing:))
+            
+            let view = AdsView(inlineWithFrame: CGRect(origin: .zero,
+                                                       size: CGSize(width: 300,
+                                                                    height: 250)),
+                               delegate: self)
+            try view?.targeting.mergeProfileTargeting(with: targeting)
+            try view?.loadCreative(fromNetwork: "99", withContentUnitID: "4493233")
+            self.pendingAdView = view
+            print("loading…")
+        } catch {
+            self.handle(error: error)
         }
     }
     

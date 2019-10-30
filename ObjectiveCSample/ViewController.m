@@ -28,9 +28,14 @@ NS_ASSUME_NONNULL_END
     return self;
 }
 
+// MARK: - Yieldprobe Configuration
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    YLDConfiguration* configuration = [[YLDConfiguration alloc] init];
+    configuration.extraTargeting = @{@"age": @"27"};
+    [self.yieldprobe configure:configuration];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -39,6 +44,7 @@ NS_ASSUME_NONNULL_END
     [self reloadAd];
 }
 
+// MARK: - Yieldprobe Request/Response
 - (void)reloadAd {
     [self.yieldprobe probeWithSlot:6846238
                  completionHandler:^(YLDBid * _Nullable bid, NSError * _Nullable error) {
