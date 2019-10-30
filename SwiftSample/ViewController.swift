@@ -27,8 +27,11 @@ class ViewController: UIViewController {
     }
     
     func handle (error: Error) {
-        print("An error occurred: \(error)")
-        print("It might be a good idea to request another ad after ~10s.")
+        let vc = UIAlertController(title: error.localizedDescription,
+                                   message: "It might be a good idea to request another ad after ~10s.",
+                                   preferredStyle: .alert)
+        vc.addAction(UIAlertAction(title: "Close", style: .default))
+        present(vc, animated: true)
     }
     
     var pendingAdView: AdsView?
@@ -67,7 +70,13 @@ extension ViewController: AdsViewDelegate {
             return handle(error: error)
         }
         
-        fatalError("Unimplemented.")
+        inAdsView.translatesAutoresizingMaskIntoConstraints = false
+        inAdsView.widthAnchor.constraint(equalToConstant: inAdsView.bounds.width).isActive = true
+        inAdsView.heightAnchor.constraint(equalToConstant: inAdsView.bounds.height).isActive = true
+
+        view.addSubview(inAdsView)
+        view.centerXAnchor.constraint(equalTo: inAdsView.centerXAnchor).isActive = true
+        view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: inAdsView.bottomAnchor).isActive = true
     }
     
 }
