@@ -89,7 +89,18 @@ NS_ASSUME_NONNULL_END
 }
 
 - (void)adFinishedCaching:(AdsView *)inAdsView withSuccessOrError:(NSError *)inError {
-    NSLog(@"%@: %@, %@", NSStringFromSelector(_cmd), inAdsView, inError);
+    if (inError) {
+        self.pendingAdView = nil;
+        return [self handleError:inError];
+    }
+    
+    inAdsView.translatesAutoresizingMaskIntoConstraints = NO;
+    [inAdsView.widthAnchor constraintEqualToConstant:inAdsView.bounds.size.width].active = YES;
+    [inAdsView.heightAnchor constraintEqualToConstant:inAdsView.bounds.size.height].active = YES;
+    
+    [self.view addSubview:inAdsView];
+    [self.view.centerXAnchor constraintEqualToAnchor:inAdsView.centerXAnchor].active = YES;
+    [self.view.safeAreaLayoutGuide.bottomAnchor constraintEqualToAnchor:inAdsView.bottomAnchor].active = YES;
 }
 
 @end
