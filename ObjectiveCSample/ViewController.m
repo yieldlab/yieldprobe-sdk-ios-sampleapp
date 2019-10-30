@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_END
 
 @implementation ViewController
 
-- (id)initWithCoder:(NSCoder*)decoder {
+- (instancetype)initWithCoder:(NSCoder*)decoder {
     self = [super initWithCoder:decoder];
     self.yieldprobe = Yieldprobe.sharedInstance;
     return self;
@@ -33,10 +33,30 @@ NS_ASSUME_NONNULL_END
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [self reloadAd];
+}
+
+- (void)reloadAd {
     [self.yieldprobe probeWithSlot:6846238
                  completionHandler:^(YLDBid * _Nullable bid, NSError * _Nullable error) {
-        NSLog(@"Handle result: %@, %@", bid, error);
+        if (error) {
+            return [self handleError:error];
+        }
+        
+        NSLog(@"Handle result: %@", bid);
     }];
+}
+
+- (void)handleError:(nonnull NSError*)error {
+    UIAlertController* vc = [UIAlertController alertControllerWithTitle:error.localizedDescription
+                                                                message:@"It might be a good idea to request another ad after ~10s."
+                                                         preferredStyle:UIAlertControllerStyleAlert];
+    [vc addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
+        [NSTimer scheduledTimerWithTimeInterval:10 repeats:NO block:^(NSTimer* timer) {
+            [self reloadAd];
+        }];
+    }]];
+    [self presentViewController:vc animated:true completion:nil];
 }
 
 @end
