@@ -30,5 +30,13 @@ NS_ASSUME_NONNULL_END
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.yieldprobe probeWithSlot:6846238
+                 completionHandler:^(YLDBid * _Nullable bid, NSError * _Nullable error) {
+        NSLog(@"Handle result: %@, %@", bid, error);
+    }];
+}
 
 @end
