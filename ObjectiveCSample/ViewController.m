@@ -51,7 +51,22 @@ NS_ASSUME_NONNULL_END
             return [self handleError:error];
         }
         
+        // AditionAdsLib expects NSString or NSNull only.
+        NSMutableDictionary* converted = [NSMutableDictionary dictionary];
+        for (NSString* key in targeting) {
+            NSObject* value = targeting[key];
+            if ([value isKindOfClass:NSString.class] || [value isKindOfClass:NSNull.class]) {
+                converted[key] = value;
+            } else {
+                converted[key] = [NSString stringWithFormat:@"%@", value];
+            }
+        }
+        
         AdsView* view = [AdsView inlineAdWithFrame:CGRectMake(0, 0, 300, 250) delegate:self];
+        if (![view.targeting mergeProfileTargetingWithDictionary:converted error:&error]) {
+            return [self handleError:error];
+        }
+        
         if (![view loadCreativeFromNetwork:@"99" withContentUnitID: @"4493233" error:&error]) {
             return [self handleError:error];
         }
