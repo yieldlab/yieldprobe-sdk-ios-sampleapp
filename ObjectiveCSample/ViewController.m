@@ -43,7 +43,12 @@ NS_ASSUME_NONNULL_END
             return [self handleError:error];
         }
         
-        NSLog(@"Handle result: %@", bid);
+        NSDictionary* targeting = [bid customTargetingWithError:&error];
+        if (!targeting) {
+            return [self handleError:error];
+        }
+        
+        NSLog(@"Handle result: %@", targeting);
     }];
 }
 
