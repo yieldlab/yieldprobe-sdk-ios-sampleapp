@@ -7,10 +7,13 @@
 
 #import "ViewController.h"
 
+#import <AditionAdsLib/AditionAdsLib.h>
 @import Yieldprobe;
 
 NS_ASSUME_NONNULL_BEGIN
-@interface ViewController ()
+@interface ViewController () <AdsViewDelegate>
+
+@property (nullable) AdsView* pendingAdView;
 
 @property Yieldprobe* yieldprobe;
 
@@ -48,7 +51,13 @@ NS_ASSUME_NONNULL_END
             return [self handleError:error];
         }
         
-        NSLog(@"Handle result: %@", targeting);
+        AdsView* view = [AdsView inlineAdWithFrame:CGRectMake(0, 0, 300, 250) delegate:self];
+        if (![view loadCreativeFromNetwork:@"99" withContentUnitID: @"4493233" error:&error]) {
+            return [self handleError:error];
+        }
+        
+        self.pendingAdView = view;
+        NSLog(@"Loading…");
     }];
 }
 
@@ -62,6 +71,10 @@ NS_ASSUME_NONNULL_END
         }];
     }]];
     [self presentViewController:vc animated:true completion:nil];
+}
+
+- (void)adFinishedCaching:(AdsView *)inAdsView withSuccessOrError:(NSError *)inError {
+    NSLog(@"%@: %@, %@", NSStringFromSelector(_cmd), inAdsView, inError);
 }
 
 @end

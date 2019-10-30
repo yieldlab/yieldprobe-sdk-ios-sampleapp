@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		910B67C72369B83E009895D4 /* Yieldprobe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910B67C62369B83E009895D4 /* Yieldprobe.framework */; };
 		910B67C82369B83E009895D4 /* Yieldprobe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 910B67C62369B83E009895D4 /* Yieldprobe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		910B67D42369CA9A009895D4 /* AditionAdsLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913BE6802359A4660042D8F8 /* AditionAdsLib.framework */; };
+		910B67D72369CBB7009895D4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614A235DA742004A106D /* libz.tbd */; };
+		910B67D82369CBBF009895D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166148235DA70A004A106D /* SystemConfiguration.framework */; };
+		910B67D92369CBD4009895D4 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614E235DA7F9004A106D /* CoreServices.framework */; };
+		910B67DA2369CBDB009895D4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614C235DA7BE004A106D /* libc++.tbd */; };
+		910B67DB2369CBE2009895D4 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166154235DA82C004A106D /* EventKit.framework */; };
+		910B67DC2369CBE8009895D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166150235DA80D004A106D /* MediaPlayer.framework */; };
+		910B67DD2369CBEE009895D4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166152235DA81B004A106D /* AssetsLibrary.framework */; };
 		91166149235DA70A004A106D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166148235DA70A004A106D /* SystemConfiguration.framework */; };
 		9116614B235DA794004A106D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614A235DA742004A106D /* libz.tbd */; };
 		9116614D235DA7C9004A106D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614C235DA7BE004A106D /* libc++.tbd */; };
@@ -116,13 +124,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910B67D42369CA9A009895D4 /* AditionAdsLib.framework in Frameworks */,
+				910B67DD2369CBEE009895D4 /* AssetsLibrary.framework in Frameworks */,
+				910B67D92369CBD4009895D4 /* CoreServices.framework in Frameworks */,
+				910B67DB2369CBE2009895D4 /* EventKit.framework in Frameworks */,
+				910B67DC2369CBE8009895D4 /* MediaPlayer.framework in Frameworks */,
+				910B67D82369CBBF009895D4 /* SystemConfiguration.framework in Frameworks */,
 				910B67C72369B83E009895D4 /* Yieldprobe.framework in Frameworks */,
+				910B67DA2369CBDB009895D4 /* libc++.tbd in Frameworks */,
+				910B67D72369CBB7009895D4 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		910B67D62369CB5B009895D4 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				91166158235DA880004A106D /* AdSupport.framework */,
+				91166152235DA81B004A106D /* AssetsLibrary.framework */,
+				9116614E235DA7F9004A106D /* CoreServices.framework */,
+				91166154235DA82C004A106D /* EventKit.framework */,
+				91166150235DA80D004A106D /* MediaPlayer.framework */,
+				91166156235DA872004A106D /* MessageUI.framework */,
+				91166148235DA70A004A106D /* SystemConfiguration.framework */,
+				9116614C235DA7BE004A106D /* libc++.tbd */,
+				9116614A235DA742004A106D /* libz.tbd */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		913BE66B23599F150042D8F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,17 +181,9 @@
 		913BE67F2359A4440042D8F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				910B67D62369CB5B009895D4 /* System */,
 				910B67C62369B83E009895D4 /* Yieldprobe.framework */,
 				9116615A235DAC9D004A106D /* Yieldprobe.framework */,
-				91166158235DA880004A106D /* AdSupport.framework */,
-				91166156235DA872004A106D /* MessageUI.framework */,
-				91166154235DA82C004A106D /* EventKit.framework */,
-				91166152235DA81B004A106D /* AssetsLibrary.framework */,
-				91166150235DA80D004A106D /* MediaPlayer.framework */,
-				9116614E235DA7F9004A106D /* CoreServices.framework */,
-				9116614C235DA7BE004A106D /* libc++.tbd */,
-				9116614A235DA742004A106D /* libz.tbd */,
-				91166148235DA70A004A106D /* SystemConfiguration.framework */,
 				913BE6802359A4660042D8F8 /* AditionAdsLib.framework */,
 			);
 			path = Frameworks;
@@ -541,6 +565,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = YM6UBXA47M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -586,6 +614,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = YM6UBXA47M;
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
