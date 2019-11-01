@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		910B67C72369B83E009895D4 /* Yieldprobe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910B67C62369B83E009895D4 /* Yieldprobe.framework */; };
-		910B67C82369B83E009895D4 /* Yieldprobe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 910B67C62369B83E009895D4 /* Yieldprobe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		910B67D42369CA9A009895D4 /* AditionAdsLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913BE6802359A4660042D8F8 /* AditionAdsLib.framework */; };
 		910B67D72369CBB7009895D4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614A235DA742004A106D /* libz.tbd */; };
 		910B67D82369CBBF009895D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166148235DA70A004A106D /* SystemConfiguration.framework */; };
@@ -26,8 +24,10 @@
 		91166155235DA82C004A106D /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166154235DA82C004A106D /* EventKit.framework */; };
 		91166157235DA872004A106D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166156235DA872004A106D /* MessageUI.framework */; };
 		91166159235DA880004A106D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166158235DA880004A106D /* AdSupport.framework */; };
-		9116615B235DAC9D004A106D /* Yieldprobe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116615A235DAC9D004A106D /* Yieldprobe.framework */; };
-		9116615C235DAC9D004A106D /* Yieldprobe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9116615A235DAC9D004A106D /* Yieldprobe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		911AB33A236C41AF00F81AF7 /* Yieldprobe.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */; };
+		911AB33B236C41AF00F81AF7 /* Yieldprobe.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */; };
+		911AB33D236C41B300F81AF7 /* Yieldprobe.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */; };
+		911AB33E236C41B300F81AF7 /* Yieldprobe.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */; };
 		913BE66E23599F150042D8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BE66D23599F150042D8F8 /* AppDelegate.swift */; };
 		913BE67023599F150042D8F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BE66F23599F150042D8F8 /* SceneDelegate.swift */; };
 		913BE67223599F150042D8F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BE67123599F150042D8F8 /* ViewController.swift */; };
@@ -50,18 +50,18 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				910B67C82369B83E009895D4 /* Yieldprobe.framework in Embed Frameworks */,
+				911AB33E236C41B300F81AF7 /* Yieldprobe.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9116615D235DAC9D004A106D /* Embed Frameworks */ = {
+		911AB33C236C41AF00F81AF7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9116615C235DAC9D004A106D /* Yieldprobe.framework in Embed Frameworks */,
+				911AB33B236C41AF00F81AF7 /* Yieldprobe.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,7 +69,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		910B67C62369B83E009895D4 /* Yieldprobe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Yieldprobe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91166148235DA70A004A106D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		9116614A235DA742004A106D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
 		9116614C235DA7BE004A106D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
@@ -79,7 +78,7 @@
 		91166154235DA82C004A106D /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/EventKit.framework; sourceTree = DEVELOPER_DIR; };
 		91166156235DA872004A106D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		91166158235DA880004A106D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
-		9116615A235DAC9D004A106D /* Yieldprobe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Yieldprobe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Yieldprobe.xcframework; sourceTree = "<group>"; };
 		913BE66A23599F150042D8F8 /* SwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913BE66D23599F150042D8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		913BE66F23599F150042D8F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9116615B235DAC9D004A106D /* Yieldprobe.framework in Frameworks */,
 				91166155235DA82C004A106D /* EventKit.framework in Frameworks */,
 				91166159235DA880004A106D /* AdSupport.framework in Frameworks */,
 				91166149235DA70A004A106D /* SystemConfiguration.framework in Frameworks */,
@@ -115,6 +113,7 @@
 				9116614D235DA7C9004A106D /* libc++.tbd in Frameworks */,
 				9116614F235DA7F9004A106D /* CoreServices.framework in Frameworks */,
 				91166151235DA80D004A106D /* MediaPlayer.framework in Frameworks */,
+				911AB33A236C41AF00F81AF7 /* Yieldprobe.xcframework in Frameworks */,
 				913BE6812359A4660042D8F8 /* AditionAdsLib.framework in Frameworks */,
 				91166157235DA872004A106D /* MessageUI.framework in Frameworks */,
 			);
@@ -128,9 +127,9 @@
 				910B67DD2369CBEE009895D4 /* AssetsLibrary.framework in Frameworks */,
 				910B67D92369CBD4009895D4 /* CoreServices.framework in Frameworks */,
 				910B67DB2369CBE2009895D4 /* EventKit.framework in Frameworks */,
+				911AB33D236C41B300F81AF7 /* Yieldprobe.xcframework in Frameworks */,
 				910B67DC2369CBE8009895D4 /* MediaPlayer.framework in Frameworks */,
 				910B67D82369CBBF009895D4 /* SystemConfiguration.framework in Frameworks */,
-				910B67C72369B83E009895D4 /* Yieldprobe.framework in Frameworks */,
 				910B67DA2369CBDB009895D4 /* libc++.tbd in Frameworks */,
 				910B67D72369CBB7009895D4 /* libz.tbd in Frameworks */,
 			);
@@ -182,9 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				910B67D62369CB5B009895D4 /* System */,
-				910B67C62369B83E009895D4 /* Yieldprobe.framework */,
-				9116615A235DAC9D004A106D /* Yieldprobe.framework */,
 				913BE6802359A4660042D8F8 /* AditionAdsLib.framework */,
+				911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -225,7 +223,7 @@
 				913BE66623599F150042D8F8 /* Sources */,
 				913BE66723599F150042D8F8 /* Frameworks */,
 				913BE66823599F150042D8F8 /* Resources */,
-				9116615D235DAC9D004A106D /* Embed Frameworks */,
+				911AB33C236C41AF00F81AF7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
