@@ -79,6 +79,7 @@
 		91166156235DA872004A106D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		91166158235DA880004A106D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
 		911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Yieldprobe.xcframework; sourceTree = "<group>"; };
+		911AB33F236C44B700F81AF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		913BE66A23599F150042D8F8 /* SwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913BE66D23599F150042D8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		913BE66F23599F150042D8F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +191,7 @@
 		915C8A312343722E00746E7E = {
 			isa = PBXGroup;
 			children = (
+				911AB33F236C44B700F81AF7 /* README.md */,
 				9186708F2359B649004A8B2B /* ObjectiveCSample */,
 				913BE66C23599F150042D8F8 /* SwiftSample */,
 				913BE67F2359A4440042D8F8 /* Frameworks */,
