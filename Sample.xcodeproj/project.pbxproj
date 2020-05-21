@@ -15,6 +15,8 @@
 		910B67DB2369CBE2009895D4 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166154235DA82C004A106D /* EventKit.framework */; };
 		910B67DC2369CBE8009895D4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166150235DA80D004A106D /* MediaPlayer.framework */; };
 		910B67DD2369CBEE009895D4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166152235DA81B004A106D /* AssetsLibrary.framework */; };
+		9114A1B62476D52700255B40 /* Yieldprobe in Frameworks */ = {isa = PBXBuildFile; productRef = 9114A1B52476D52700255B40 /* Yieldprobe */; };
+		9114A1B82476D53F00255B40 /* Yieldprobe in Frameworks */ = {isa = PBXBuildFile; productRef = 9114A1B72476D53F00255B40 /* Yieldprobe */; };
 		91166149235DA70A004A106D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166148235DA70A004A106D /* SystemConfiguration.framework */; };
 		9116614B235DA794004A106D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614A235DA742004A106D /* libz.tbd */; };
 		9116614D235DA7C9004A106D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9116614C235DA7BE004A106D /* libc++.tbd */; };
@@ -24,10 +26,6 @@
 		91166155235DA82C004A106D /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166154235DA82C004A106D /* EventKit.framework */; };
 		91166157235DA872004A106D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166156235DA872004A106D /* MessageUI.framework */; };
 		91166159235DA880004A106D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91166158235DA880004A106D /* AdSupport.framework */; };
-		911AB33A236C41AF00F81AF7 /* Yieldprobe.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */; };
-		911AB33B236C41AF00F81AF7 /* Yieldprobe.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */; };
-		911AB33D236C41B300F81AF7 /* Yieldprobe.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */; };
-		911AB33E236C41B300F81AF7 /* Yieldprobe.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 911AB337236C417F00F81AF7 /* Yieldprobe.xcframework */; };
 		913BE66E23599F150042D8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BE66D23599F150042D8F8 /* AppDelegate.swift */; };
 		913BE67023599F150042D8F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BE66F23599F150042D8F8 /* SceneDelegate.swift */; };
 		913BE67223599F150042D8F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BE67123599F150042D8F8 /* ViewController.swift */; };
@@ -42,31 +40,6 @@
 		9186709D2359B64F004A8B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9186709B2359B64F004A8B2B /* LaunchScreen.storyboard */; };
 		918670A02359B64F004A8B2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9186709F2359B64F004A8B2B /* main.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		910B67C92369B83E009895D4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				911AB33E236C41B300F81AF7 /* Yieldprobe.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		911AB33C236C41AF00F81AF7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				911AB33B236C41AF00F81AF7 /* Yieldprobe.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		91166148235DA70A004A106D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
@@ -112,9 +85,9 @@
 				9116614B235DA794004A106D /* libz.tbd in Frameworks */,
 				91166153235DA81B004A106D /* AssetsLibrary.framework in Frameworks */,
 				9116614D235DA7C9004A106D /* libc++.tbd in Frameworks */,
+				9114A1B82476D53F00255B40 /* Yieldprobe in Frameworks */,
 				9116614F235DA7F9004A106D /* CoreServices.framework in Frameworks */,
 				91166151235DA80D004A106D /* MediaPlayer.framework in Frameworks */,
-				911AB33A236C41AF00F81AF7 /* Yieldprobe.xcframework in Frameworks */,
 				913BE6812359A4660042D8F8 /* AditionAdsLib.framework in Frameworks */,
 				91166157235DA872004A106D /* MessageUI.framework in Frameworks */,
 			);
@@ -125,10 +98,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				910B67D42369CA9A009895D4 /* AditionAdsLib.framework in Frameworks */,
+				9114A1B62476D52700255B40 /* Yieldprobe in Frameworks */,
 				910B67DD2369CBEE009895D4 /* AssetsLibrary.framework in Frameworks */,
 				910B67D92369CBD4009895D4 /* CoreServices.framework in Frameworks */,
 				910B67DB2369CBE2009895D4 /* EventKit.framework in Frameworks */,
-				911AB33D236C41B300F81AF7 /* Yieldprobe.xcframework in Frameworks */,
 				910B67DC2369CBE8009895D4 /* MediaPlayer.framework in Frameworks */,
 				910B67D82369CBBF009895D4 /* SystemConfiguration.framework in Frameworks */,
 				910B67DA2369CBDB009895D4 /* libc++.tbd in Frameworks */,
@@ -225,13 +198,15 @@
 				913BE66623599F150042D8F8 /* Sources */,
 				913BE66723599F150042D8F8 /* Frameworks */,
 				913BE66823599F150042D8F8 /* Resources */,
-				911AB33C236C41AF00F81AF7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SwiftSample;
+			packageProductDependencies = (
+				9114A1B72476D53F00255B40 /* Yieldprobe */,
+			);
 			productName = SwiftSample;
 			productReference = 913BE66A23599F150042D8F8 /* SwiftSample.app */;
 			productType = "com.apple.product-type.application";
@@ -243,13 +218,15 @@
 				9186708A2359B649004A8B2B /* Sources */,
 				9186708B2359B649004A8B2B /* Frameworks */,
 				9186708C2359B649004A8B2B /* Resources */,
-				910B67C92369B83E009895D4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ObjectiveCSample;
+			packageProductDependencies = (
+				9114A1B52476D52700255B40 /* Yieldprobe */,
+			);
 			productName = ObjectiveCSample;
 			productReference = 9186708E2359B649004A8B2B /* ObjectiveCSample.app */;
 			productType = "com.apple.product-type.application";
@@ -280,6 +257,9 @@
 				Base,
 			);
 			mainGroup = 915C8A312343722E00746E7E;
+			packageReferences = (
+				9114A1B42476D52700255B40 /* XCRemoteSwiftPackageReference "yieldprobe-sdk-ios" */,
+			);
 			productRefGroup = 913BE66B23599F150042D8F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -667,6 +647,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9114A1B42476D52700255B40 /* XCRemoteSwiftPackageReference "yieldprobe-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yieldlab/yieldprobe-sdk-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9114A1B52476D52700255B40 /* Yieldprobe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9114A1B42476D52700255B40 /* XCRemoteSwiftPackageReference "yieldprobe-sdk-ios" */;
+			productName = Yieldprobe;
+		};
+		9114A1B72476D53F00255B40 /* Yieldprobe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9114A1B42476D52700255B40 /* XCRemoteSwiftPackageReference "yieldprobe-sdk-ios" */;
+			productName = Yieldprobe;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 915C8A322343722E00746E7E /* Project object */;
 }
