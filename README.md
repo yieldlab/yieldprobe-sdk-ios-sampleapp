@@ -1,5 +1,7 @@
 # Yieldprobe for iOS
 
+* [API Reference](https://yieldlab.github.io/yieldprobe-sdk-ios/)
+
 This folder contains:
 
 * `ObjectiveCSample`: a sample integration using Objective-C,
@@ -12,11 +14,15 @@ The sample apps show a way to integrate the Yieldprobe SDK into the class `ViewC
 ## Integration Instructions
 
 1. Select your Xcode project in the sidebar
-2. Select your app target
-3. Select “General”
-4. Select “Frameworks, Libraries, and Embedded Content”
-5. Drag and drop `Yieldprobe.xcframework` into the list.
-6. Make sure `Yieldprobe.xcframework` is configured as **Embed & Sign**.  
+2. Select the project above the list of targets
+3. Select the tab *“Swift Packages”*
+4. Enter this value in the search bar `https://github.com/yieldlab/yieldprobe-sdk-ios.git`
+5. Click *“Next”*
+6. Select *“Branch”* → *“master”*
+7. Click *“Next”*
+8. In the list *“Choose package product and targets:”* make sure you add *“Yieldprobe, Library”* to your app target.
+9. Import Yieldprobe into your code: `import Yieldprobe`
+10. Start using the Yieldprobe API.
 
 ## API Usage
 
